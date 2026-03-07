@@ -16,7 +16,7 @@ public class CampaignProgressConfiguration : IEntityTypeConfiguration<CampaignPr
         builder.Property(c => c.UserId).HasColumnName("user_id").IsRequired();
 
         builder.Property(c => c.CurrentStage)
-            .HasConversion<string>()
+            .HasConversion<int>()
             .HasColumnName("current_stage")
             .IsRequired();
 
