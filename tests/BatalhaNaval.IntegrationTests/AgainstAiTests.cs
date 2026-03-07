@@ -513,8 +513,8 @@ public class AgainstAiTests : IClassFixture<IntegrationTestWebAppFactory>
                 : (0, acc.Maximo)
         ).Maximo;
 
-        finalMatchState.P1_Stats.Streak.Should().Be(acertosConsecutivosRealDoP1,
-            $"A IA deveria ter {acertosConsecutivosRealDoP1} e o encontrado foi {finalMatchState.P1_Stats.Streak}");
+        finalMatchState.P1_Stats.MaxStreak.Should().Be(acertosConsecutivosRealDoP1,
+            $"A IA deveria ter {acertosConsecutivosRealDoP1} e o encontrado foi {finalMatchState.P1_Stats.MaxStreak}");
     }
 
     private async Task Passo_ValidarFimDeJogoNoRedisFuzilarTabuleiroDaIA()
@@ -554,8 +554,8 @@ public class AgainstAiTests : IClassFixture<IntegrationTestWebAppFactory>
                     : (0, acc.Maximo)
             ).Maximo;
 
-            finalMatchState.P2_Stats.Streak.Should().Be(acertosConsecutivosRealDaIA,
-                $"A IA deveria ter {acertosConsecutivosRealDaIA} e o encontrado foi {finalMatchState.P2_Stats.Streak}");
+            finalMatchState.P2_Stats.MaxStreak.Should().Be(acertosConsecutivosRealDaIA,
+                $"A IA deveria ter {acertosConsecutivosRealDaIA} e o encontrado foi {finalMatchState.P2_Stats.MaxStreak}");
         }
         else
         {
