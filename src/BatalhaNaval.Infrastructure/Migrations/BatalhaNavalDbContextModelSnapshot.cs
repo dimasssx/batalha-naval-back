@@ -33,9 +33,9 @@ namespace BatalhaNaval.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("completed_at");
 
-                    b.Property<string>("CurrentStage")
+                    b.Property<int>("CurrentStage")
                         .IsRequired()
-                        .HasColumnType("text")
+                        .HasColumnType("integer")
                         .HasColumnName("current_stage");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -65,8 +65,8 @@ namespace BatalhaNaval.Infrastructure.Migrations
                         .HasColumnType("text")
                         .HasColumnName("ai_difficulty");
 
-                    b.Property<string>("CampaignStage")
-                        .HasColumnType("text")
+                    b.Property<int?>("CampaignStage")
+                        .HasColumnType("integer")
                         .HasColumnName("campaign_stage");
 
                     b.Property<Guid>("CurrentTurnPlayerId")
