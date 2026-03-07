@@ -96,7 +96,7 @@ public class MatchConfiguration : IEntityTypeConfiguration<Match>
             .HasDefaultValue(false);
 
         builder.Property(m => m.CampaignStage)
-            .HasConversion<string>()
+            .HasConversion<int?>()
             .HasColumnName("campaign_stage");
 
     }
